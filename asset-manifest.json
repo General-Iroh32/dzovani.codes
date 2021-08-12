@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/dzovani.codes/static/css/main.d79f7898.chunk.css",
+    "main.js": "/dzovani.codes/static/js/main.f93e01d8.chunk.js",
+    "main.js.map": "/dzovani.codes/static/js/main.f93e01d8.chunk.js.map",
+    "runtime-main.js": "/dzovani.codes/static/js/runtime-main.fbfb7972.js",
+    "runtime-main.js.map": "/dzovani.codes/static/js/runtime-main.fbfb7972.js.map",
+    "static/js/2.d3f5203b.chunk.js": "/dzovani.codes/static/js/2.d3f5203b.chunk.js",
+    "static/js/2.d3f5203b.chunk.js.map": "/dzovani.codes/static/js/2.d3f5203b.chunk.js.map",
+    "index.html": "/dzovani.codes/index.html",
+    "static/css/main.d79f7898.chunk.css.map": "/dzovani.codes/static/css/main.d79f7898.chunk.css.map",
+    "static/js/2.d3f5203b.chunk.js.LICENSE.txt": "/dzovani.codes/static/js/2.d3f5203b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fbfb7972.js",
+    "static/js/2.d3f5203b.chunk.js",
+    "static/css/main.d79f7898.chunk.css",
+    "static/js/main.f93e01d8.chunk.js"
+  ]
+}
