@@ -1,80 +1,79 @@
 @import "../../global.scss";
-.about{
-    background-color: $first;
-    display: flex;
-   .intro-main{
-    width:100vw;
+.about {
+  background-color: $first;
+  display: flex;
+  .intro-main {
+    width: 100vw;
     overflow: hidden;
     .header {
-        position: relative;
-        overflow: hidden;
-        min-height: 80rem;  
-        @media only screen and (max-width: 37.5em) { // phone
-            min-height: 70rem;    
-        }
-        &:after {
-            content: "";
-            position: absolute;
-            width: 100vw;
-            height: 100%;
-            top: 0;
-            right: 0;
-            z-index: -1;
-           
-        }
-            
-            @media only screen and (max-width: 56.25em) { // tab-land
-                &:after {
-                    transform: rotate(90deg);
-                    background-position: 50% 0%;
-                    left: 0;
-                    bottom: 0;
-    
-                }
-            }
-        .hero {
-            position: absolute;
-            top: 50%;
-            left: 10%;
-            transform: translateY(-70%);
-            @media only screen and (max-width: 56.25em) { // tab-land
-                top: 55%;
-            }
-            .second{
-                text-transform: uppercase;
-                letter-spacing: 5px;
-                margin-bottom: 1.3rem;
-                margin-top: 1rem;
-                color: $second;
-            }
-            .text-container{
-                width:35rem;
-                position: relative;
-                overflow: hidden;
-                height: 12rem;
-                margin: 1rem 0 1rem -1rem;
-            }
-            .text-container span {
-                font-size: 7rem;
-                color: rgb(255, 255, 255);
-                text-transform: lowercase;
-                font-family: Calibre-SemiBold,sans-serif;
-                position: absolute;
-                top: 1.5rem;
-                left: 1.5rem;
-            }
-            .tsecond{
-                color: $tsecond
-            }
-            .first{
-                    font-size: 1.3rem;
-                    letter-spacing: 3px;
-                    text-transform: uppercase;
-                    color: $tmain;
-            }
-    }
-    }
-   
+      position: relative;
+      overflow: hidden;
+      min-height: 80rem;
+      @media only screen and (max-width: 37.5em) {
+        // phone
+        min-height: 70rem;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: -1;
+      }
 
-}
+      @media only screen and (max-width: 56.25em) {
+        // tab-land
+        &:after {
+          transform: rotate(90deg);
+          background-position: 50% 0%;
+          left: 0;
+          bottom: 0;
+        }
+      }
+      .hero {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-70%);
+        @media only screen and (max-width: 56.25em) {
+          // tab-land
+          top: 55%;
+        }
+        .second {
+          text-transform: uppercase;
+          letter-spacing: 5px;
+          margin-bottom: 1.3rem;
+          margin-top: 1rem;
+          color: $second;
+        }
+        .text-container {
+          width: 35rem;
+          position: relative;
+          overflow: hidden;
+          height: 12rem;
+          margin: 1rem 0 1rem -1rem;
+        }
+        .text-container span {
+          font-size: 7rem;
+          color: rgb(255, 255, 255);
+          text-transform: lowercase;
+          font-family: Calibre-SemiBold, sans-serif;
+          position: absolute;
+          top: 1.5rem;
+          left: 1.5rem;
+        }
+        .tsecond {
+          color: $tsecond;
+        }
+        .first {
+          font-size: 1.3rem;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          color: $tmain;
+        }
+      }
+    }
+  }
 }
