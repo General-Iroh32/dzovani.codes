@@ -3,6 +3,7 @@ import { init } from "ityped";
 import { useEffect, useRef } from "react";
 import Particles from "react-particles-js";
 import ParticlesConfig from "./particles";
+
 export default function About() {
   const textRef = useRef();
   useEffect(() => {
@@ -12,13 +13,14 @@ export default function About() {
       loop: false,
     });
   }, []);
+  
   return (
     <div className="about">
       <div className="intro-main">
         <div className="header">
+        <Particles height={window.screen.height} params={ParticlesConfig}></Particles>
           <div className="hero">
             <h2 className="first">Hi there👋, I’m</h2>
-
             <div className="text-container">
               <span ref={textRef}></span>
             </div>
@@ -27,8 +29,10 @@ export default function About() {
             <p className="tsecond">I’m a front-end developer</p>
             <p className="tsecond">based in Vienna, Austria.</p>
           </div>
-          <Particles params={ParticlesConfig}></Particles>
-        </div>
+          
+          </div>
+         
+        
       </div>
     </div>
   );
