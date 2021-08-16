@@ -4,8 +4,8 @@ export default function topbar() {
         <div className="nav-container">
             
             
-                <img src="../../../Unbenannt.png" alt="Girl in a jacket" width="96" height="96"/>
-                <a style={{color: "red", fontSize: "16px"}}></a>
+                <img src={process.env.PUBLIC_URL+"/images/unknown.png"} alt="Girl in a jacket" width="100%" height="100%"/>
+               
            
         <div className="nav-icon">
             <div className="bar1"></div>
