@@ -50,12 +50,13 @@ export default function Topbar() {
             initial={animateFrom}
             animate={animateTo}
             transition={{delay: 0.9}} className="nav-right">
-            <ol className="normal">Navigation
-            <li><a href="#home"  onClick={() => setOpen(!open)} >Home</a></li>
-            <li><a href="#portfolio"  onClick={() => setOpen(!open)} >Portfolio</a></li>
-            <li><a href="#work"  onClick={() => setOpen(!open)} >Projects</a></li>
-            <li><a href="#contact"  onClick={() => setOpen(!open)} >Contact</a></li>
-            </ol>
+            <p className="p1" >Navigation</p>
+            <div className="nav-flex">
+            <p className="p2"><a href="#home"  onClick={() => setOpen(!open)} >Home</a></p>
+            <p className="p2"><a href="#portfolio"  onClick={() => setOpen(!open)} >Portfolio</a></p>
+            <p className="p2"><a href="#work"  onClick={() => setOpen(!open)} >Projects</a></p>
+            <p className="p2"><a href="#contact"  onClick={() => setOpen(!open)} >Contact</a></p>
+            </div>
             </motion.div>
             </nav>
             }

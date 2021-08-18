@@ -195,33 +195,65 @@
       opacity: 1;
       z-index: 2;
       color: $first;
-      left:65%;
+      left:60%;
       top:30%;
       font-size: 2rem;
+      height: calc(100vh - 30%);
+      overflow: hidden;
+      
       @media only screen and (max-width: 46em) {
         left:auto;
+        width:100vw;
       }
-      ol.normal {
-        list-style-type: disc;
+    
+        @media only screen and (max-height: 35em) {
+        left:auto;  
+          flex-direction: column;
+          flex-wrap: wrap;
+          margin: 10px;
+        }
+      .nav-flex{
+        height: calc(100vh - 30% - 70px);
+        width:70vw;
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        @media only screen and (max-width: 46em) {
+          left:auto;
+          width:100vw;
+        }
+      
+          @media only screen and (max-height: 35em) {
+          left:auto;  
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+          }
+      }
+      .p1{
         color:$first;
         font-family: 'Courier New', Courier, monospace;
         font-weight: bold;
         font-size: 2.5rem;
+        overflow: hidden;
+        transition: 0.5s;
       }
-      li {
-        margin: 1rem; 
+      .p2 {
+        overflow: hidden;
+        margin: 0.5rem 0.5rem 0rem 0.5rem;   
         font-size: 3rem;
         transition: 0.5s;
         text-decoration: none;
-        color:inherit;
+        color:$first;
         a{
           text-decoration: none;
-        color:inherit;
+        color:$first;
+        }
+        :hover{
+          letter-spacing: 10px;
         }
       }
-      li:hover{
-        letter-spacing: 10px;
-      }
+      
     }
   }
 }
