@@ -27,7 +27,7 @@ export default function About() {
             </div>
             <h4 className="second">fullstack webdev</h4>
             <h4 className="second">software engineer</h4>
-            <p className="tsecond">I’m a front-end developer</p>
+            <p className="tsecond">I’m a fullstack developer</p>
             <p className="tsecond">based in Vienna, Austria.</p>
             
           </div>

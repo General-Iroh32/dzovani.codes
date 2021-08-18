@@ -180,7 +180,7 @@
           font-family: Calibre-SemiBold, sans-serif;
           position: absolute;
           top: 1.5rem;
-          left: 1.5rem;
+          
           @media only screen and (max-width: 240rem) and (min-width: 160.3rem) {
             font-size: 13rem;
           }
@@ -190,17 +190,14 @@
           @media only screen and (max-width: 46em) {
             // tab-land
             font-size: 4.1rem;
-            left: 0.7rem;
           }
           @media only screen and (max-height: 33.65em) and (orientation: landscape) {
             font-size: 3.4rem;
             top: 0.7rem;
-            left: 0.3rem;
           }
           @media only screen and (max-height: 17.5rem) and (orientation: landscape) {
             font-size: 3rem;
             top: 0.1rem;
-            left: 0.3rem;
           }
         }
         .tsecond {
