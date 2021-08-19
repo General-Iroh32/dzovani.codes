@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/dzovani.codes/static/css/main.b6fd81fc.chunk.css",
-    "main.js": "/dzovani.codes/static/js/main.ccc1021b.chunk.js",
-    "main.js.map": "/dzovani.codes/static/js/main.ccc1021b.chunk.js.map",
+    "main.css": "/dzovani.codes/static/css/main.313f4d57.chunk.css",
+    "main.js": "/dzovani.codes/static/js/main.c53582d3.chunk.js",
+    "main.js.map": "/dzovani.codes/static/js/main.c53582d3.chunk.js.map",
     "runtime-main.js": "/dzovani.codes/static/js/runtime-main.fbfb7972.js",
     "runtime-main.js.map": "/dzovani.codes/static/js/runtime-main.fbfb7972.js.map",
-    "static/js/2.14e90e10.chunk.js": "/dzovani.codes/static/js/2.14e90e10.chunk.js",
-    "static/js/2.14e90e10.chunk.js.map": "/dzovani.codes/static/js/2.14e90e10.chunk.js.map",
+    "static/js/2.840efc89.chunk.js": "/dzovani.codes/static/js/2.840efc89.chunk.js",
+    "static/js/2.840efc89.chunk.js.map": "/dzovani.codes/static/js/2.840efc89.chunk.js.map",
     "index.html": "/dzovani.codes/index.html",
-    "static/css/main.b6fd81fc.chunk.css.map": "/dzovani.codes/static/css/main.b6fd81fc.chunk.css.map",
-    "static/js/2.14e90e10.chunk.js.LICENSE.txt": "/dzovani.codes/static/js/2.14e90e10.chunk.js.LICENSE.txt"
+    "static/css/main.313f4d57.chunk.css.map": "/dzovani.codes/static/css/main.313f4d57.chunk.css.map",
+    "static/js/2.840efc89.chunk.js.LICENSE.txt": "/dzovani.codes/static/js/2.840efc89.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.fbfb7972.js",
-    "static/js/2.14e90e10.chunk.js",
-    "static/css/main.b6fd81fc.chunk.css",
-    "static/js/main.ccc1021b.chunk.js"
+    "static/js/2.840efc89.chunk.js",
+    "static/css/main.313f4d57.chunk.css",
+    "static/js/main.c53582d3.chunk.js"
   ]
 }
