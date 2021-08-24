@@ -30,12 +30,12 @@ export default function Topbar() {
 
     function time() {
         refi.current.disabled = true;
-        setTimeout(function() {
+        setTimeout(function () {
             refi.current.disabled = false;
         }, 1000);
     }
     return (
-        
+
         <div className="nav-container">
             <img
                 src={process.env.PUBLIC_URL + "/images/unknown.png"}
@@ -43,7 +43,7 @@ export default function Topbar() {
                 width="100%"
                 height="100%"
             />
-            <button className={"nav-icon" + open} id="icon" ref={refi} onClick={() => {setOpen(!open); time();}}>
+            <button className={"nav-icon" + open} id="icon" ref={refi} onClick={() => { setOpen(!open); time(); }}>
                 <div className="bar1"></div>
                 <div className="bar2"></div>
                 <div className="bar3"></div>
@@ -61,10 +61,10 @@ export default function Topbar() {
                     transition={{ delay: custom * 0.9 }}
                     className="nav-left"
                 >
-          <p className="socials">My Socials</p>
-          <div className="socialbox">
+                    <p className="socials">My Socials</p>
+                    <div className="socialbox">
 
-          </div>
+                    </div>
                 </motion.div>
                 <motion.div
                     animate={animation}
@@ -73,32 +73,24 @@ export default function Topbar() {
                 >
                     <p className="p1">Navigation</p>
                     <div className="nav-flex">
-                        <p className="p2">
-                            <a href="#home" onClick={() => setOpen(!open)}>
-                                Home
-                            </a>
-                        </p>
-                        <p className="p2">
-                            <a href="#portfolio" onClick={() => setOpen(!open)}>
-                                Portfolio
-                            </a>
-                        </p>
-                        <p className="p2">
-                            <a href="#work" onClick={() => setOpen(!open)}>
-                                Projects
-                            </a>
-                        </p>
-                        <p className="p2">
-                            <a href="#contact" onClick={() => setOpen(!open)}>
-                                Contact
-                            </a>
-                        </p>
+                        {Nav("#home", "Home")}
+                        {Nav("#portfolio", "Portfolio")}
+                        {Nav("#work", "Projects")}
+                        {Nav("#contact", "Contact")}
                     </div>
                 </motion.div>
             </nav>
 
         </div>
     );
+
+    function Nav(href, text) {
+        return <p className="p2">
+            <a href={href} onClick={() => setOpen(!open)}>
+                {text}
+            </a>
+        </p>;
+    }
 
     function Motion(delay, classname) {
         return (

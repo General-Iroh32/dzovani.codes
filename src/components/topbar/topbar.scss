@@ -152,14 +152,14 @@
         width: 50px;
       }
     }
-    .bar1{
-      transform: rotate(-45deg)
+    .bar1 {
+      transform: rotate(-45deg);
     }
-    .bar2{
+    .bar2 {
       opacity: 0;
     }
-    .bar3{
-      transform: rotate(45deg)
+    .bar3 {
+      transform: rotate(45deg);
     }
   }
   .nav-main {
@@ -178,71 +178,69 @@
         background-color: $second;
         width: calc(100vw / 4);
         height: 100vh;
-        
       }
     }
-    .nav-left{
+    .nav-left {
       position: fixed;
       opacity: 1;
       z-index: 2;
       color: $first;
       padding: 1em;
-      left:auto;
+      left: auto;
       font-size: 1rem;
-      top:25%;
-      right:77%;
+      top: 25%;
+      right: 77%;
       @media only screen and (max-width: 46em) {
-        display:none;
+        display: none;
       }
-      .socials{
+      .socials {
         font-size: 1.5em;
       }
-      .socialbox{
+      .socialbox {
         
       }
     }
-    .nav-right{
+    .nav-right {
       position: fixed;
       opacity: 1;
       z-index: 2;
       color: $first;
-      left:60%;
-      top:30%;
+      left: 60%;
+      top: 30%;
       font-size: 2rem;
       height: calc(100vh - 30%);
       overflow: hidden;
       @media only screen and (max-width: 46em) {
-        left:10%;
-        width:100vw;
+        left: 10%;
+        width: 100vw;
       }
-    
-        @media only screen and (max-height: 35em) {
-        left:auto;  
-          flex-direction: column;
-          flex-wrap: wrap;
-          margin: 10px;
-        }
-      .nav-flex{
+
+      @media only screen and (max-height: 35em) {
+        left: auto;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 10px;
+      }
+      .nav-flex {
         height: calc(100vh - 30% - 70px);
-        width:70vw;
+        width: 70vw;
         font-size: 2rem;
         display: flex;
         flex-direction: column;
         @media only screen and (max-width: 46em) {
-          left:auto;
-          width:100vw;
+          left: auto;
+          width: 100vw;
         }
-      
-          @media only screen and (max-height: 35em) {
-          left:auto;  
-            flex-direction: row;
-            flex-wrap: wrap;
-            
-          }
+
+        @media only screen and (max-height: 35em) {
+          left: auto;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
       }
-      .p1{
-        color:$first;
-        font-family: 'Courier New', Courier, monospace;
+      .p1 {
+        color: $first;
+        font-family: "Courier New", Courier, monospace;
         font-weight: bold;
         font-size: 2.5rem;
         overflow: hidden;
@@ -250,20 +248,19 @@
       }
       .p2 {
         overflow: hidden;
-        margin: 0.5rem 0.5rem 0rem 0.5rem;   
+        margin: 0.5rem 0.5rem 0rem 0.5rem;
         font-size: 3rem;
         transition: 0.5s;
         text-decoration: none;
-        color:$first;
-        a{
+        color: $first;
+        a {
           text-decoration: none;
-        color:$first;
+          color: $first;
         }
-        :hover{
+        :hover {
           letter-spacing: 10px;
         }
       }
-      
     }
   }
 }
