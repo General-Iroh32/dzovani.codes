@@ -25,6 +25,7 @@
   }
   .nav-iconfalse {
     background-color: #000;
+    border-style: none;
     position: absolute;
     right: 3rem;
     top: 3rem;
@@ -88,6 +89,7 @@
   }
   .nav-icontrue {
     background-color: #000;
+    border-style: none;
     position: absolute;
     right: 3rem;
     top: 3rem;
@@ -161,15 +163,13 @@
     }
   }
   .nav-main {
-    
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
-    
+    display: none;
     .box-wrapper {
       overflow: hidden;
-      position: fixed;
       top: 0;
       left: 0;
       z-index: 1;
@@ -186,10 +186,19 @@
       opacity: 1;
       z-index: 2;
       color: $first;
-     left:auto;
+      padding: 1em;
+      left:auto;
       font-size: 1rem;
-      @media only screen and (min-width: 46em) {
-        left:auto;
+      top:25%;
+      right:77%;
+      @media only screen and (max-width: 46em) {
+        display:none;
+      }
+      .socials{
+        font-size: 1.5em;
+      }
+      .socialbox{
+        
       }
     }
     .nav-right{
@@ -202,9 +211,8 @@
       font-size: 2rem;
       height: calc(100vh - 30%);
       overflow: hidden;
-      
       @media only screen and (max-width: 46em) {
-        left:auto;
+        left:10%;
         width:100vw;
       }
     

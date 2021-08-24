@@ -1,67 +1,113 @@
-import "./topbar.scss"
-import {useState} from 'react';
-import {motion} from 'framer-motion';
+import "./topbar.scss";
+import { useState, useRef } from "react";
+import { motion, useAnimation } from "framer-motion";
 
 export default function Topbar() {
-    const [open,setOpen] = useState(false);
-    const animateFrom = {opacity: 0, y: -1000}
-    const animateTo = {opacity: 0.96, y: 0}
+    const [open, setOpen] = useState(false);
+    const animation = useAnimation();
+    let ref = useRef(null);
+    let refi = useRef(null);
+    let custom = 0;
+    if (open) {
+        ref.current.style.display = "flex";
+        animation.start({
+            y: 0,
+            opacity: 0.96
+        });
+    }
+    else {
+        custom = 0.8;
+        if (ref.current != null) {
+            setTimeout(() => {
+                ref.current.style.display = "none";
+            }, 1000);
+        }
+        animation.start({
+            y: -1000,
+            opacity: 0
+        });
+    }
+
+    function time() {
+        refi.current.disabled = true;
+        setTimeout(function() {
+            refi.current.disabled = false;
+        }, 1000);
+    }
     return (
+        
         <div className="nav-container">
-            
-            
-                <img src={process.env.PUBLIC_URL+"/images/unknown.png"} alt="Girl in a jacket" width="100%" height="100%"/>
-               
-           
-        <div className={"nav-icon" + (open)} onClick={() => setOpen(!open)}>
-            <div className="bar1"></div>
-            <div className="bar2"></div>
-            <div className="bar3"></div>
-            
-        </div>
-        {open && 
-        <nav className="nav-main">
-           <div className="box-wrapper">
+            <img
+                src={process.env.PUBLIC_URL + "/images/unknown.png"}
+                alt="Girl in a jacket"
+                width="100%"
+                height="100%"
+            />
+            <button className={"nav-icon" + open} id="icon" ref={refi} onClick={() => {setOpen(!open); time();}}>
+                <div className="bar1"></div>
+                <div className="bar2"></div>
+                <div className="bar3"></div>
+            </button>
+
+            <nav className="nav-main" ref={ref}>
+                <div className="box-wrapper" >
+                    {Motion(0.2, "box")}
+                    {Motion(0.4, "box")}
+                    {Motion(0.6, "box")}
+                    {Motion(0.8, "box")}
+                </div>
                 <motion.div
-                 initial={animateFrom}
-                 animate={animateTo}
-                 transition={{delay: 0.2}}
-                 className="box"></motion.div>
+                    animate={animation}
+                    transition={{ delay: custom * 0.9 }}
+                    className="nav-left"
+                >
+          <p className="socials">My Socials</p>
+          <div className="socialbox">
+
+          </div>
+                </motion.div>
                 <motion.div
-                 initial={animateFrom}
-                 animate={animateTo}
-                 transition={{delay: 0.4}} className="box"></motion.div>
-                <motion.div
-                 initial={animateFrom}
-                 animate={animateTo}
-                 transition={{delay: 0.6}} className="box"></motion.div>
-                <motion.div
-                 initial={animateFrom}
-                 animate={animateTo}
-                 transition={{delay: 0.8}} className="box"></motion.div>
-            </div>
-            <motion.div
-            initial={animateFrom}
-            animate={animateTo}
-            transition={{delay: 0.7}} className="nav-left">
-            aa
-            </motion.div>
-            <motion.div
-            initial={animateFrom}
-            animate={animateTo}
-            transition={{delay: 0.9}} className="nav-right">
-            <p className="p1" >Navigation</p>
-            <div className="nav-flex">
-            <p className="p2"><a href="#home"  onClick={() => setOpen(!open)} >Home</a></p>
-            <p className="p2"><a href="#portfolio"  onClick={() => setOpen(!open)} >Portfolio</a></p>
-            <p className="p2"><a href="#work"  onClick={() => setOpen(!open)} >Projects</a></p>
-            <p className="p2"><a href="#contact"  onClick={() => setOpen(!open)} >Contact</a></p>
-            </div>
-            </motion.div>
+                    animate={animation}
+                    transition={{ delay: custom * 0.9 }}
+                    className="nav-right"
+                >
+                    <p className="p1">Navigation</p>
+                    <div className="nav-flex">
+                        <p className="p2">
+                            <a href="#home" onClick={() => setOpen(!open)}>
+                                Home
+                            </a>
+                        </p>
+                        <p className="p2">
+                            <a href="#portfolio" onClick={() => setOpen(!open)}>
+                                Portfolio
+                            </a>
+                        </p>
+                        <p className="p2">
+                            <a href="#work" onClick={() => setOpen(!open)}>
+                                Projects
+                            </a>
+                        </p>
+                        <p className="p2">
+                            <a href="#contact" onClick={() => setOpen(!open)}>
+                                Contact
+                            </a>
+                        </p>
+                    </div>
+                </motion.div>
             </nav>
-            }
-            
-            </div>
-            
-    )
+
+        </div>
+    );
+
+    function Motion(delay, classname) {
+        return (
+            <motion.div
+                animate={animation}
+                transition={{ delay: delay }}
+                className={classname}
+            ></motion.div>
+        );
+    }
 }
+
