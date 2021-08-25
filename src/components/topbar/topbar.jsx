@@ -39,7 +39,7 @@ export default function Topbar() {
         <div className="nav-container">
             <img
                 src={process.env.PUBLIC_URL + "/images/unknown.png"}
-                alt="Girl in a jacket"
+                alt="D#"
                 width="100%"
                 height="100%"
             />
@@ -61,14 +61,47 @@ export default function Topbar() {
                     transition={{ delay: custom * 0.9 }}
                     className="nav-left"
                 >
+
                     <p className="socials">My Socials</p>
                     <div className="socialbox">
+                        <div className="socialrow">
+                            <div className="social">
+                                <div className="showHover">Github</div>
+                                {socialhref("https://github.com/General-Iroh32", "/images/github.svg", "1")}
+                            </div>
+                            <div className="social">
+                                <div className="showHover">LinkedIn</div>
+                                {socialhref("https://www.linkedin.com/in/dzovani-koller-37a9ab21a/", "/images/linkedin.svg", "1")}
+                            </div>
+                            <div className="social">
+                                <div className="showHover">Twitter</div>
+                                {socialhref("https://twitter.com/dzovani_k/", "/images/twitter.svg", "1")}
+                            </div>
+                        </div>
+                        <div className="socialrow">
+                            <div className="social">
+                                <div className="showHover">Codingame</div>
+                                {socialhref("https://www.codingame.com/profile/fd2426c0276dd5c9013ad1387c2772873930193", "/images/codingame.svg", "100")}
+                            </div>
+                            <div className="social">
+                                <div className="showHover">Discord</div>
+                                {socialhref("https://discordapp.com/users/500371094956670976", "/images/discord.svg", "1")}
+                            </div>
+                            <div className="social">
+                                <div className="showHover">Spengerhub</div>
+                                {socialhref("https://hub.spengergasse.at/u/kol19575/user/profile", "/images/spengo.png", "1")}
+                            </div>
 
+                        </div>
                     </div>
+                
+                {Nav("#home", "Resume📖")}
+                
+
                 </motion.div>
                 <motion.div
                     animate={animation}
-                    transition={{ delay: custom * 0.9 }}
+                    transition={{ delay: custom * 0.7 }}
                     className="nav-right"
                 >
                     <p className="p1">Navigation</p>
@@ -83,6 +116,17 @@ export default function Topbar() {
 
         </div>
     );
+
+    function socialhref(ahref, filepath, filter) {
+        return <a href={ahref} className="socialContent" style={{ filter: 'brightness(' + filter + '%)' }}>
+            <img
+                src={process.env.PUBLIC_URL + filepath}
+                alt={filepath}
+                height="24px"
+                width="25px"
+            />
+        </a>;
+    }
 
     function Nav(href, text) {
         return <p className="p2">

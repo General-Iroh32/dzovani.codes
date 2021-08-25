@@ -189,14 +189,56 @@
       left: auto;
       font-size: 1rem;
       top: 25%;
-      right: 77%;
+      right: 70%;
+      width: 300px;
       @media only screen and (max-width: 46em) {
         display: none;
+      }
+      @media only screen and (max-width: 80em) {
+        right: 55%;
       }
       .socials {
         font-size: 1.5em;
       }
       .socialbox {
+        display: inline-flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: calc(100% - 30%);
+        .socialrow{
+          display: inline-flex;
+          flex-direction: row;
+          margin-top:1rem;
+          
+          .social{
+            align-items: center;
+            flex: 0 0 110px;
+            .showHover{
+              position: fixed;
+              padding-left: 26px;
+              padding-top:5px;
+              padding-right: 10px;
+              height: 1.5rem;;
+              
+              color:#000;
+              opacity: 0;
+              transition: opacity 0.5s;
+            }
+          .socialContent{
+            height: 1.7rem;
+            margin-right: 2rem;
+            overflow: hidden;
+            color:#000;  
+          }
+          
+        }
+        :hover .showHover{
+          opacity: 1;
+
+        }
+        
+          
+        }
         
       }
     }
@@ -246,21 +288,23 @@
         overflow: hidden;
         transition: 0.5s;
       }
-      .p2 {
-        overflow: hidden;
-        margin: 0.5rem 0.5rem 0rem 0.5rem;
-        font-size: 3rem;
-        transition: 0.5s;
-        text-decoration: none;
-        color: $first;
-        a {
-          text-decoration: none;
-          color: $first;
-        }
-        :hover {
-          letter-spacing: 10px;
-        }
-      }
+      
+    }
+  }
+  .p2 {
+    overflow: hidden;
+    margin: 0.5rem 0.5rem 0rem 0.5rem;
+    font-size: 3rem;
+    letter-spacing: 0px;
+    transition: letter-spacing 0.5s;
+    text-decoration: none;
+    color: $first;
+    a {
+      text-decoration: none;
+      color: $first;
+    }
+    &:hover {
+      letter-spacing: 10px;
     }
   }
 }
