@@ -36,7 +36,7 @@
           animation: arrowBlink 1.5s infinite;
         }
       }
-      @media only screen and (max-width: 240em) and (min-width: 160.3rem) {
+      @media only screen and (min-width: 160.3rem) {
         left: calc(50vw - 200px);
         img {
           width: 400px;
@@ -83,7 +83,7 @@
         left: 10%;
         transform: translateY(-90%);
         pointer-events: none;
-        @media only screen and (max-width: 240rem) and (min-width: 160.3rem) {
+        @media only screen and (min-width: 160.3rem) {
           top: 68%;
         }
         @media only screen and (max-width: 160rem) and (min-width: 120.3rem) {
@@ -118,7 +118,7 @@
           margin-bottom: 1.3rem;
           margin-top: 1rem;
           color: $second;
-          @media only screen and (max-width: 240rem) and (min-width: 160.3rem) {
+          @media only screen and (min-width: 160.3rem) {
             margin-bottom: 2rem;
             margin-top: 1.7rem;
             letter-spacing: 5;
@@ -150,7 +150,7 @@
           overflow: hidden;
           height: 12rem;
           margin: 1rem 0 1rem -0rem;
-          @media only screen and (max-width: 240rem) and (min-width: 160.3rem) {
+          @media only screen and (min-width: 160.3rem) {
             width: 50rem;
             height: 17.5rem;
           }
@@ -182,7 +182,7 @@
           position: absolute;
           top: 1.5rem;
           
-          @media only screen and (max-width: 240rem) and (min-width: 160.3rem) {
+          @media only screen and (min-width: 160.3rem) {
             font-size: 13rem;
           }
           @media only screen and (max-width: 160rem) and (min-width: 120.3rem) {
@@ -204,7 +204,7 @@
         .tsecond {
           font-size: 1.6rem;
           color: $tsecond;
-          @media only screen and (max-width: 240rem) and (min-width: 160.3rem) {
+          @media only screen and (min-width: 160.3rem) {
             font-size: 4.6rem;
           }
           @media only screen and (max-width: 160rem) and (min-width: 120.3rem) {
@@ -223,7 +223,7 @@
           letter-spacing: 3px;
           text-transform: uppercase;
           color: $tmain;
-          @media only screen and (max-width: 240rem) and (min-width: 160.3rem) {
+          @media only screen and (min-width: 160.3rem) {
             font-size: 4.4rem;
           }
           @media only screen and (max-width: 160rem) and (min-width: 120.3rem) {

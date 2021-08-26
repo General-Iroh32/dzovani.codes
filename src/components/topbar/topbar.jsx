@@ -85,7 +85,7 @@ export default function Topbar() {
                             </div>
                             <div className="social">
                                 <div className="showHover">Discord</div>
-                                {socialhref("https://discordapp.com/users/500371094956670976", "/images/discord.svg", "1")}
+                                {socialhref("https://discord.gg/ZxVXDT93hq", "/images/discord.svg", "1")}
                             </div>
                             <div className="social">
                                 <div className="showHover">Spengerhub</div>
@@ -95,7 +95,7 @@ export default function Topbar() {
                         </div>
                     </div>
                 
-                {Nav("#home", "Resume📖")}
+                {Nav("#home", "Pro g(r)a(m)mers of the world, unite!")}
                 
 
                 </motion.div>
