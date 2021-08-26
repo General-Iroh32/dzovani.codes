@@ -8,7 +8,7 @@
   width: 117px;
   height: 100px;
   overflow: hidden;
-  @media only screen and (max-width: 240rem) and (min-width: 160.3rem) {
+  @media only screen and (min-width: 160.3rem) {
     width: 234px;
     height: 200px;
   }
@@ -39,7 +39,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    @media only screen and (max-width: 240rem) and (min-width: 160.3rem) {
+    @media only screen and (min-width: 160.3rem) {
       width: 200px;
       height: 200px;
     }
@@ -66,7 +66,7 @@
       transition: 0.4s;
       background-color: $tmain;
       border-radius: 1rem;
-      @media only screen and (max-width: 240rem) and (min-width: 160.3rem) {
+      @media only screen and (min-width: 160.3rem) {
         width: 50px;
         height: 5px;
       }
@@ -78,7 +78,7 @@
     .bar2 {
       width: 30px;
       transform-origin: right;
-      @media only screen and (max-width: 240rem) and (min-width: 160.3rem) {
+      @media only screen and (min-width: 160.3rem) {
         width: 70px;
         height: 5px;
       }
@@ -103,7 +103,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    @media only screen and (max-width: 240rem) and (min-width: 160.3rem) {
+    @media only screen and (min-width: 160.3rem) {
       width: 200px;
       height: 200px;
     }
@@ -130,7 +130,7 @@
       margin: -1px;
       transition: 0.4s;
       background-color: $tmain;
-      @media only screen and (max-width: 240rem) and (min-width: 160.3rem) {
+      @media only screen and (min-width: 160.3rem) {
         margin: -2.5px;
         width: 50px;
         height: 5px;
@@ -144,7 +144,7 @@
     .bar2 {
       width: 30px;
       transform-origin: right;
-      @media only screen and (max-width: 240rem) and (min-width: 160.3rem) {
+      @media only screen and (min-width: 160.3rem) {
         width: 70px;
         height: 5px;
       }
@@ -189,46 +189,83 @@
       left: auto;
       font-size: 1rem;
       top: 25%;
-      right: 70%;
-      width: 300px;
+      left:5%;
+      width: calc(100vw / 3);
       @media only screen and (max-width: 46em) {
         display: none;
       }
       @media only screen and (max-width: 80em) {
         right: 55%;
       }
+      @media only screen and (max-height: 35em) {
+        display: none;
+      }
       .socials {
         font-size: 1.5em;
+        @media only screen and (min-width: 160.3rem) {
+          font-size: 5.5em;
+        }
+        @media only screen and (max-width: 160rem) and (min-width: 120.3rem) {
+          font-size: 3.5em;
+        }
       }
       .socialbox {
         display: inline-flex;
         flex-direction: column;
         width: 100%;
-        margin-bottom: calc(100% - 30%);
+        margin-bottom: calc(20vh);
+        
         .socialrow{
           display: inline-flex;
           flex-direction: row;
           margin-top:1rem;
-          
+          margin-bottom: 2rem;
           .social{
             align-items: center;
-            flex: 0 0 110px;
+            flex: 2;
+            
             .showHover{
               position: fixed;
               padding-left: 26px;
-              padding-top:5px;
+              padding-top:0px;
               padding-right: 10px;
-              height: 1.5rem;;
+              font-size:1.5em;
               
               color:#000;
               opacity: 0;
               transition: opacity 0.5s;
+              @media only screen and (min-width: 160.3rem) {
+              padding-left: 105px;
+              padding-top:20px;
+              flex-grow: 1;
+              height: 6rem;
+              font-size:3.5em;
+              }
+              @media only screen and (max-width: 160rem) and (min-width: 120.3rem) {
+              padding-left: 50px;
+              padding-top:7px;
+              flex-grow: 1;
+              height: 3rem;
+              font-size:2em;
+              }
             }
           .socialContent{
             height: 1.7rem;
             margin-right: 2rem;
             overflow: hidden;
             color:#000;  
+            img{
+              width: 25px;
+              height: 24px;
+              @media only screen and (min-width: 160.3rem) {
+              width: 100px;
+              height: 96px;
+              }
+              @media only screen and (max-width: 160rem) and (min-width: 120.3rem) {
+                width: 50px;
+              height: 48px;
+              }
+            }
           }
           
         }
@@ -237,9 +274,32 @@
 
         }
         
+        
           
         }
         
+      }
+      .p2 {
+        overflow: hidden;
+        margin: 0.5rem 0.5rem 0rem 0.5rem;
+        font-size: 2.9rem;
+        letter-spacing: 0px;
+        transition: letter-spacing 0.5s;
+        text-decoration: none;
+        color: $first;
+        a {
+          text-decoration: none;
+          color: $first;
+        }
+        @media only screen and (max-height: 52.250em) {
+          display:none;
+        }
+        @media only screen and (min-width: 160.3rem) {
+          font-size:6.9rem;
+        }
+        @media only screen and (max-width: 160rem) and (min-width: 120.3rem) {
+          font-size:4.9rem ;
+        }
       }
     }
     .nav-right {
@@ -249,7 +309,7 @@
       color: $first;
       left: 60%;
       top: 30%;
-      font-size: 2rem;
+      font-size: 2.5rem;
       height: calc(100vh - 30%);
       overflow: hidden;
       @media only screen and (max-width: 46em) {
@@ -263,10 +323,16 @@
         flex-wrap: wrap;
         margin: 10px;
       }
+      @media only screen and (min-width: 160.3rem) {
+        font-size:6.5rem;
+      }
+      @media only screen and (max-width: 160rem) and (min-width: 120.3rem) {
+        font-size:4.5rem ;
+      }
       .nav-flex {
         height: calc(100vh - 30% - 70px);
         width: 70vw;
-        font-size: 2rem;
+        font-size: 2.5rem;
         display: flex;
         flex-direction: column;
         @media only screen and (max-width: 46em) {
@@ -284,27 +350,34 @@
         color: $first;
         font-family: "Courier New", Courier, monospace;
         font-weight: bold;
-        font-size: 2.5rem;
+        font-size: inherit;
         overflow: hidden;
         transition: 0.5s;
       }
-      
+      .p2 {
+        overflow: hidden;
+        margin: 0.5rem 0.5rem 0rem 0.5rem;
+        font-size: 2.9rem;
+        letter-spacing: 0px;
+        transition: letter-spacing 0.5s;
+        text-decoration: none;
+        color: $first;
+        a {
+          text-decoration: none;
+          color: $first;
+        }
+        &:hover {
+          letter-spacing: 10px;
+        }
+        @media only screen and (min-width: 160.3rem) {
+          font-size:6.9rem;
+        }
+        @media only screen and (max-width: 160rem) and (min-width: 120.3rem) {
+          font-size:4.9rem ;
+        }
+      }
+     
     }
   }
-  .p2 {
-    overflow: hidden;
-    margin: 0.5rem 0.5rem 0rem 0.5rem;
-    font-size: 3rem;
-    letter-spacing: 0px;
-    transition: letter-spacing 0.5s;
-    text-decoration: none;
-    color: $first;
-    a {
-      text-decoration: none;
-      color: $first;
-    }
-    &:hover {
-      letter-spacing: 10px;
-    }
-  }
+
 }
