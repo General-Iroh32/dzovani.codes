@@ -291,7 +291,10 @@
           text-decoration: none;
           color: $first;
         }
-        @media only screen and (max-height: 52.250em) {
+        @media only screen and (max-height: 52rem ) and (min-width: 120.3rem) {
+          display:none;
+        }
+        @media only screen and (max-height: 77rem ) and (min-width: 160.3rem) {
           display:none;
         }
         @media only screen and (min-width: 160.3rem) {

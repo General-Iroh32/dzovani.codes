@@ -67,15 +67,15 @@ export default function Topbar() {
                         <div className="socialrow">
                             <div className="social">
                                 <div className="showHover">Github</div>
-                                {socialhref("https://github.com/General-Iroh32", "/images/github.svg", "1")}
+                                {socialhref("https://github.com/General-Iroh32", "/images/github.svg", "100")}
                             </div>
                             <div className="social">
                                 <div className="showHover">LinkedIn</div>
-                                {socialhref("https://www.linkedin.com/in/dzovani-koller-37a9ab21a/", "/images/linkedin.svg", "1")}
+                                {socialhref("https://www.linkedin.com/in/dzovani-koller-37a9ab21a/", "/images/linkedin.svg", "100")}
                             </div>
                             <div className="social">
                                 <div className="showHover">Twitter</div>
-                                {socialhref("https://twitter.com/dzovani_k/", "/images/twitter.svg", "1")}
+                                {socialhref("https://twitter.com/dzovani_k/", "/images/twitter.svg", "100")}
                             </div>
                         </div>
                         <div className="socialrow">
@@ -85,7 +85,7 @@ export default function Topbar() {
                             </div>
                             <div className="social">
                                 <div className="showHover">Discord</div>
-                                {socialhref("https://discord.gg/ZxVXDT93hq", "/images/discord.svg", "1")}
+                                {socialhref("https://discord.gg/ZxVXDT93hq", "/images/discord.svg", "100")}
                             </div>
                             <div className="social">
                                 <div className="showHover">Spengerhub</div>
@@ -107,7 +107,7 @@ export default function Topbar() {
                     <p className="p1">Navigation</p>
                     <div className="nav-flex">
                         {Nav("#home", "Home")}
-                        {Nav("#portfolio", "Portfolio")}
+                        {Nav("#skills", "Skills")}
                         {Nav("#work", "Projects")}
                         {Nav("#contact", "Contact")}
                     </div>

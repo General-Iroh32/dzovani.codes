@@ -20,7 +20,7 @@ export default function About() {
           <Particles height={window.screen.height} params={ParticlesConfig}></Particles>
           {Content(textRef)}
         </div>
-        <a href="#portfolio">
+        <a href="#skills">
           <img src={process.env.PUBLIC_URL + "/images/down.png"} alt="down"></img>
         </a>
       </div>

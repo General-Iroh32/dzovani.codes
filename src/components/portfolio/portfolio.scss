@@ -1,42 +1,87 @@
 @import "../../global.scss";
 .portfolio {
-  background-color: $first;
-  display: flex;
-  .intro-main {
-    width: 100vw;
-    overflow: hidden;
-
-    .second {
-      text-transform: uppercase;
-      letter-spacing: 5px;
-      margin-bottom: 1.3rem;
-      margin-top: 1rem;
-      color: $second;
-    }
-    .text-container {
-      width: 35rem;
-      position: relative;
-      overflow: hidden;
-      height: 12rem;
-      margin: 1rem 0 1rem -1rem;
-    }
-    .text-container span {
-      font-size: 7rem;
-      color: rgb(255, 255, 255);
-      text-transform: lowercase;
-      font-family: Calibre-SemiBold, sans-serif;
-      position: absolute;
-      top: 1.5rem;
-      left: 1.5rem;
-    }
-    .tsecond {
-      color: $tsecond;
-    }
-    .first {
-      font-size: 1.3rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: $tmain;
+    display: flex;
+    height: 100%;
+    place-items: center;
+    background: $first;
+  }
+  ::selection{
+    color: #fff;
+    background: $first;
+  }
+  .skill-bars{
+    display: flex;
+    padding: 25px 30px;
+    padding-top: 100px;
+    width: calc(100vw/4);
+    background: #000;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
+  }
+  .skill-bars .bar{
+    margin-top: 10px;
+  }
+  .skill-bars .bar:first-child{
+    margin-top: 0px;
+  }
+  .skill-bars .bar .info{
+    margin-bottom: 5px;
+  }
+  .skill-bars .bar .info span{
+    font-weight: 500;
+    font-size: 17px;
+    opacity: 0;
+    color: $tmain;
+    animation: showText 0.5s 1s linear forwards;
+  }
+  @keyframes showText {
+    100%{
+      opacity: 1;
     }
   }
+  .skill-bars .bar .progress-line{
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+                0 1px rgba(255,255,255,0.8);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+  }
+  @keyframes animate {
+    100%{
+      transform: scaleX(1);
+    }
+  }
+  .bar .progress-line span{
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    color: $second;
+    background: $second;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+  }
+  .bar .progress-line.Javascript span{
+    width: 85%;
+  }
+  .bar .progress-line.Typescript span{
+    width: 70%;
+  }
+  .bar .progress-line.Java span{
+    width: 75%;
+  }
+  .bar .progress-line.CC span{
+    width: 80%;
+  }
+  .bar .progress-line.Python span{
+    width: 40%;
+  }
+ 
+.p5{
+  color:$tmain;
 }
