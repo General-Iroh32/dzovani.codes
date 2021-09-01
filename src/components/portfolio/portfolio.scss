@@ -1,19 +1,36 @@
 @import "../../global.scss";
 .portfolio {
-    display: flex;
+    display: block;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     place-items: center;
     background: $first;
+    overflow: hidden;
+    .FlexBox{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      place-items: center;
+    }
+    .p{
+      top:30vh;
+      margin-left: calc(50vw - 6.2vw);
+      color: #fff;
+      position:relative;
+      font-size: 5vw;
+    }
   }
   ::selection{
     color: #fff;
     background: $first;
   }
+  
   .skill-bars{
-    display: flex;
-    padding: 25px 30px;
-    padding-top: 100px;
-    width: calc(100vw/4);
+    padding: 0px 3vw;
+    padding-top: 20px;
+    width: calc(100vw/3);
     background: #000;
     box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
     border-radius: 10px;
@@ -29,7 +46,7 @@
   }
   .skill-bars .bar .info span{
     font-weight: 500;
-    font-size: 17px;
+    font-size: calc(1vw + 0.5rem);
     opacity: 0;
     color: $tmain;
     animation: showText 0.5s 1s linear forwards;
@@ -84,4 +101,9 @@
  
 .p5{
   color:$tmain;
+  font-size: calc(1vw + 0.5rem);
+  @media(max-width: 383px)  {
+    height:25px;
+    overflow: hidden;
+  }
 }

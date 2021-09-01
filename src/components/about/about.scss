@@ -4,7 +4,7 @@
   display: flex;
   .intro-main {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
     a {
       position: absolute;
@@ -79,9 +79,9 @@
       
       .hero {
         position: absolute;
-        top: 50%;
+        top: 45%;
         left: 10%;
-        transform: translateY(-90%);
+        transform: translateY(-100%);
         pointer-events: none;
         @media only screen and (min-width: 160.3rem) {
           top: 68%;
