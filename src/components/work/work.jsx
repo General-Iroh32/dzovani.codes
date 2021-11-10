@@ -37,7 +37,7 @@ export default function work() {
                         </div>
                         <div className="project-box">
                             <div className="project-box__link">
-                                <a href="" target="_blank" rel="noopener noreferrer"></a>
+                                <p></p>
                             </div>
                             <div className="project-box__content">
                                 <h3 className="heading-3 mb-l">Valor Minecraft Mod</h3>
