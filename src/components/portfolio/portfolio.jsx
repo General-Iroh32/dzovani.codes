@@ -1,23 +1,55 @@
 import "./portfolio.scss";
-import { useRef } from "react";
+import { useRef,useEffect } from "react";
 
 
 export default function Portfolio() {
-  let ref = useRef(null);
-  if(ref.current!=null){
-    ref.current.getBoundingClientRect();
-  }
+  const inputRef = useRef();
+  const scrollHandler = _ => {
+    if(window.screen.height >= inputRef.current.getBoundingClientRect().top){
+      //display the portfolio
+      inputRef.current.style.display = "flex";
+    }
+    else{
+      //hide the portfolio
+      inputRef.current.style.display = "none";
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler, true);
+    return () => {
+      window.removeEventListener("scroll", scrollHandler, true);
+    };
+  }, []); 
   
-  return <div className="portfolio" id="skills">
-   <p className="p">Skills</p>
-    <div className="FlexBox">
-     {newFunction("Programming Language","Javascript","Typescript","Java","C#","CC","Python")}
-     {newFunction("Design Language","Javascript","Typescript","Java","C#","CC","Python")}
-     </div>
-  </div>;
+  return (
+    <div className="portfolio" id="skills">
+      
+      <p className="p">Skills</p>
+      <div className="FlexBox" ref={inputRef}>
+        {newFunction(
+          "Programming Language",
+          "Javascript",
+          "Typescript",
+          "Java",
+          "C#",
+          "CC",
+          "Python"
+        )}
+        {newFunction(
+          "Design",
+          "Css",
+          "Xaml",
+          "Html",
+          "Adobe XD",
+          "AdobeXD",
+          "Photoshop"
+        )}
+      </div>
+    </div>
+  );
   function newFunction(title,first,second,third,fourth,fourth2,fifth) {
     return <div className="skill-bars">
-      <p className="p5" ref={ref}>{title}</p>
+      <p className="p5">{title}</p>
       <div className="bar">
         <div className="info">
           <span>{first}</span>
