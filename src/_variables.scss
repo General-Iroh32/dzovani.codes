@@ -1,0 +1,28 @@
+// Colors
+$first: #000000;
+$second: #09f755;
+$third: #f80332;
+$fourth: #efc518;
+$tmain: #ffffff;
+$tsecond: #797575;
+
+// Dimensions
+$height: 100vh;
+
+// Breakpoints
+$bp-largest: 75em;     // 1200px
+$bp-large: 68.75em;    // 1100px
+$bp-medium: 56.25em;   // 900px
+$bp-small: 37.5em;     // 600px
+$bp-smallest: 31.25em; // 500px
+
+// Font sizes
+$default-font-size: 1.6rem;
+
+// Export all variables
+:export {
+  first: $first;
+  second: $second;
+  tmain: $tmain;
+  tsecond: $tsecond;
+} 

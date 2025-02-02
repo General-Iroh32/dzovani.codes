@@ -1,42 +1,85 @@
 import "./about.scss";
-import { init } from "ityped";
-import { useEffect, useRef } from "react";
-import Particles from "react-particles-js";
-import ParticlesConfig from "./particles";
-export default function About() {
-  const textRef = useRef();
+import React, { useEffect, useState, useMemo } from "react";
+
+// Custom hook for typing animation
+const useTypewriter = (words, options = {}) => {
+  const {
+    typingSpeed = 150,
+    backspaceSpeed = 100,
+    pauseBeforeBackspace = 1000
+  } = options;
+
+  const [displayText, setDisplayText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+
   useEffect(() => {
-    init(textRef.current, {
-      showCursor: false,
-      strings: ["Giovanni", "Giovani", "Dzovani."],
-      loop: false,
-    });
-  }, []);
+    let timeout;
+    const currentWord = words[currentIndex];
+
+    if (currentIndex >= words.length) {
+      setCurrentIndex(0);
+      return;
+    }
+
+    if (isTyping) {
+      if (displayText.length < currentWord.length) {
+        timeout = setTimeout(() => {
+          setDisplayText(currentWord.slice(0, displayText.length + 1));
+        }, typingSpeed);
+      } else {
+        timeout = setTimeout(() => {
+          setIsTyping(false);
+        }, pauseBeforeBackspace);
+      }
+    } else {
+      if (displayText.length > 0) {
+        timeout = setTimeout(() => {
+          setDisplayText(prev => prev.slice(0, -1));
+        }, backspaceSpeed);
+      } else {
+        setIsTyping(true);
+        setCurrentIndex(prev => (prev + 1) % words.length);
+      }
+    }
+
+    return () => timeout && clearTimeout(timeout);
+  }, [currentIndex, displayText, isTyping, words, typingSpeed, backspaceSpeed, pauseBeforeBackspace]);
+
+  return { displayText };
+};
+
+export default function About() {
+  const names = useMemo(() => ["Giovanni", "Giovani", "Dzovani"], []);
+  const { displayText } = useTypewriter(names, {
+    typingSpeed: 150,
+    backspaceSpeed: 100,
+    pauseBeforeBackspace: 1000
+  });
 
   return (
     <div className="about" id="home">
       <div className="intro-main">
         <div className="header">
-          <Particles height={window.screen.height} params={ParticlesConfig}></Particles>
-          {Content(textRef)}
+          <div className="hero">
+            <h2 className="first">Hi there👋, I'm</h2>
+            <div className="text-container">
+              <span className="typing-text">
+                {displayText}
+                <span className="cursor-animation">|</span>
+              </span>
+            </div>
+            <h4 className="second">front-end webdev</h4>
+            <h4 className="second">software engineer</h4>
+            <p className="tsecond">I'm a front-end developer</p>
+            <p className="tsecond">based in Vienna, Austria.</p>
+          </div>
         </div>
         <a href="#skills">
-          <img src={process.env.PUBLIC_URL + "/images/down.png"} alt="down"></img>
+          <img src={process.env.PUBLIC_URL + "/images/down.png"} alt="down" />
         </a>
       </div>
     </div>
   );
-}
-function Content(textRef) {
-  return <div className="hero">
-    <h2 className="first">Hi there👋, I’m</h2>
-    <div className="text-container">
-      <span ref={textRef}></span>
-    </div>
-    <h4 className="second">front-end webdev</h4>
-    <h4 className="second">software engineer</h4>
-    <p className="tsecond">I’m a front-end developer</p>
-    <p className="tsecond">based in Vienna, Austria.</p>
-  </div>;
 }
 

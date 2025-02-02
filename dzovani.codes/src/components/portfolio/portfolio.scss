@@ -1,6 +1,4 @@
-@use '../../variables' as *;
-@use '../../mixins' as *;
-
+@import "../../global.scss";
 .portfolio {
     display: block;
     align-items: center;
@@ -21,10 +19,10 @@
     }
     .p{
       top:30vh;
+      margin-left: calc(50vw - 6.2vw);
       color: #fff;
       position:relative;
       font-size: 5vw;
-      text-align: center;
     }
   }
   ::selection{

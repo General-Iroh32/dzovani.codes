@@ -1,0 +1,243 @@
+@import "../../global.scss";
+.about {
+  background-color: $first;
+  display: flex;
+  .intro-main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    a {
+      position: absolute;
+      bottom: 12%;
+      left: calc(50vw - 50px);
+      img {
+        width: 100px;
+        animation: arrowBlink 1.5s infinite;
+      }
+      @media only screen and (max-height: 34em) {
+        left: calc(50vw - 25px);
+        bottom: 2%;
+        img {
+          width: 50px;
+          animation: arrowBlink 1.5s infinite;
+        }
+      }
+      @media only screen and (max-width: 46em) {
+        left: calc(50vw - 25px);
+        img {
+          width: 50px;
+          animation: arrowBlink 1.5s infinite;
+        }
+      }
+      @media only screen and (max-width: 160em) and (min-width: 120.3rem) {
+        left: calc(50vw - 100px);
+        img {
+          width: 200px;
+          animation: arrowBlink 1.5s infinite;
+        }
+      }
+      @media only screen and (min-width: 160.3rem) {
+        left: calc(50vw - 200px);
+        img {
+          width: 400px;
+          animation: arrowBlink 1.5s infinite;
+        }
+      }
+      @keyframes arrowBlink {
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+    .header {
+      position: relative;
+      overflow: hidden;
+      min-height: 80rem;
+      @media only screen and (max-width: 37.5em) {
+        // phone
+        min-height: 70rem;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: -1;
+      }
+
+      @media only screen and (max-width: 46em) {
+        // tab-land
+        &:after {
+          transform: rotate(90deg);
+          background-position: 50% 0%;
+          left: 0;
+          bottom: 0;
+        }
+      }
+      
+      .hero {
+        position: absolute;
+        top: 45%;
+        left: 10%;
+        transform: translateY(-100%);
+        pointer-events: none;
+        @media only screen and (min-width: 160.3rem) {
+          top: 68%;
+        }
+        @media only screen and (max-width: 160rem) and (min-width: 120.3rem) {
+          // tab-land
+          top: 67%;
+        }
+        @media only screen and (max-width: 46rem) {
+          // tab-land
+          top: 39%;
+        }
+        @media only screen and (max-width: 20rem) {
+          // tab-land
+          top: 37%;
+        }
+        @media only screen and (max-width: 17.5rem) {
+          // tab-land
+          top: 43%;
+          left: 6%;
+        }
+
+        @media only screen and (max-height: 33.65rem) and (orientation: landscape) {
+          top: 23%;
+        }
+        @media only screen and (max-height: 17.5rem) and (orientation: landscape) {
+          top: 20%;
+        }
+
+        .second {
+          font-size: 1.5rem;
+          text-transform: uppercase;
+          letter-spacing: 5px;
+          margin-bottom: 1.3rem;
+          margin-top: 1rem;
+          color: $second;
+          @media only screen and (min-width: 160.3rem) {
+            margin-bottom: 2rem;
+            margin-top: 1.7rem;
+            letter-spacing: 5;
+            font-size: 4.5rem;
+          }
+          @media only screen and (max-width: 160rem) and (min-width: 120.3rem) {
+            margin-bottom: 1.7rem;
+            margin-top: 1.5rem;
+            letter-spacing: 5;
+            font-size: 3.5rem;
+          }
+          @media only screen and (max-width: 46em) {
+            // tab-land
+            margin-bottom: 0.7rem;
+            margin-top: 0.5rem;
+            letter-spacing: 4;
+            font-size: 0.9rem;
+          }
+          @media only screen and (max-height: 33.65em) and (orientation: landscape) {
+            margin-bottom: 0.5rem;
+            margin-top: 0.3rem;
+            letter-spacing: 4;
+            font-size: 0.5rem;
+          }
+        }
+        .text-container {
+          width: 35rem;
+          position: relative;
+          overflow: hidden;
+          height: 12rem;
+          margin: -1rem 0 1rem -0rem;
+          @media only screen and (min-width: 160.3rem) {
+            width: 50rem;
+            height: 17.5rem;
+          }
+          @media only screen and (max-width: 160rem) and (min-width: 120.3rem) {
+            width: 48rem;
+            height: 15.5rem;
+          }
+          @media only screen and (max-width: 46em) {
+            // tab-land
+            width: 24rem;
+            height: 8rem;
+          }
+          @media only screen and (max-height: 33.65em) and (orientation: landscape) {
+            height: 4.8rem;
+            width: 24rem;
+            margin: 0rem 0 0.3rem -0rem;
+          }
+          @media only screen and (max-height: 17.5rem) and (orientation: landscape) {
+            height: 4.2rem;
+            width: 24rem;
+            margin: 0rem 0 0.1rem -0rem;
+          }
+        }
+        .text-container span {
+          font-size: 8rem;
+          color: rgb(255, 255, 255);
+          text-transform: lowercase;
+          font-family: Calibre-SemiBold, sans-serif;
+          position: absolute;
+          top: 1.5rem;
+          
+          @media only screen and (min-width: 160.3rem) {
+            font-size: 13rem;
+          }
+          @media only screen and (max-width: 160rem) and (min-width: 120.3rem) {
+            font-size: 12rem;
+          }
+          @media only screen and (max-width: 46em) {
+            // tab-land
+            font-size: 4.1rem;
+          }
+          @media only screen and (max-height: 33.65em) and (orientation: landscape) {
+            font-size: 3.4rem;
+            top: 0.7rem;
+          }
+          @media only screen and (max-height: 17.5rem) and (orientation: landscape) {
+            font-size: 3rem;
+            top: 0.1rem;
+          }
+        }
+        .tsecond {
+          font-size: 1.6rem;
+          color: $tsecond;
+          @media only screen and (min-width: 160.3rem) {
+            font-size: 4.6rem;
+          }
+          @media only screen and (max-width: 160rem) and (min-width: 120.3rem) {
+            font-size: 3.6rem;
+          }
+          @media only screen and (max-width: 46em) {
+            // tab-land
+            font-size: 1.2rem;
+          }
+          @media only screen and (max-height: 33.65em) and (orientation: landscape) {
+            font-size: 0.8rem;
+          }
+        }
+        .first {
+          font-size: 2rem;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          color: $tmain;
+          @media only screen and (min-width: 160.3rem) {
+            font-size: 4.4rem;
+          }
+          @media only screen and (max-width: 160rem) and (min-width: 120.3rem) {
+            font-size: 3.4rem;
+          }
+          @media only screen and (max-width: 46em) {
+            // tab-land
+            font-size: 1.4rem;
+          }
+          @media only screen and (max-height: 33.65em) and (orientation: landscape) {
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+}

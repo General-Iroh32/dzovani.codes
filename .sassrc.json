@@ -1,0 +1,8 @@
+{
+  "includePaths": ["src"],
+  "outputStyle": "compressed",
+  "sourceMap": true,
+  "sourceMapContents": true,
+  "implementation": "sass",
+  "api": "modern"
+} 
