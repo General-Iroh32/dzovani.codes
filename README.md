@@ -1,4 +1,5 @@
-# dzovani.codes
+# dzovani.codes 
+[![Maintainability](https://api.codeclimate.com/v1/badges/ae22a44c51f9b0e982c7/maintainability)](https://codeclimate.com/github/General-Iroh32/dzovani.codes/maintainability)
 
 My personal portfolio website showcasing my work and skills, built with React and SCSS, featuring smooth animations and a clean design aesthetic.
 
@@ -81,4 +82,3 @@ Make sure you have:
 - Node.js v18 or higher
 - npm v8 or higher
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/ae22a44c51f9b0e982c7/maintainability)](https://codeclimate.com/github/General-Iroh32/dzovani.codes/maintainability)
