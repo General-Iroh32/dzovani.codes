@@ -69,9 +69,9 @@ export default function About() {
                 <span className="cursor-animation">|</span>
               </span>
             </div>
-            <h4 className="second">front-end webdev</h4>
+            <h4 className="second">Full-Stack Developer</h4>
             <h4 className="second">software engineer</h4>
-            <p className="tsecond">I'm a front-end developer</p>
+            <p className="tsecond">I'm a full-stack developer</p>
             <p className="tsecond">based in Vienna, Austria.</p>
           </div>
         </div>
