@@ -3,13 +3,13 @@ import React from 'react';
 const skillPercentages = {
   Javascript: 85,
   Typescript: 70,
-  Java: 75,
-  'C#': 80,
-  Python: 40,
+  Java: 85,
+  'C#': 75,
+  Python: 90,
   Html: 95,
   Css: 85,
   Xaml: 75,
-  'Adobe XD': 80,
+  'Figma': 80,
   Photoshop: 50
 };
 

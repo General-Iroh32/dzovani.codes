@@ -23,11 +23,11 @@ export default function Portfolio() {
   const skillSets = [
     {
       title: "Programming Language",
-      skills: ["Javascript", "Typescript", "Java", "C#", "Python"]
+      skills: ["Python", "Java", "Javascript", "Typescript", "C#"]
     },
     {
-      title: "Design",
-      skills: ["Css", "Xaml", "Html", "Adobe XD", "Photoshop"]
+      title: "Design & Tools",
+      skills: ["Html", "Css", "Xaml", "Figma", "Photoshop"]
     }
   ];
 

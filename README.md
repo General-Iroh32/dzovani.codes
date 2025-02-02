@@ -45,7 +45,7 @@ My personal portfolio website showcasing my work and skills, built with React an
 
 ### Short Term
 - [ ] Implement blog section
-- [ ] Add Contact form
+- [X] Add Contact form
 - [ ] Enhance accessibility features
 - [ ] Add more interactive animations
 

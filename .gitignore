@@ -75,3 +75,6 @@ Thumbs.db
 *.pid
 *.gz
 *.zip
+
+# Misc
+.env
